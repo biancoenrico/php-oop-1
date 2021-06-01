@@ -18,6 +18,7 @@ class user{
     public function discountIf($age){
         if($age > 50){
             $this->$discount = 47;
+            
         }else{
             $this->$discount = 0;
         }
@@ -62,7 +63,7 @@ foreach($users as $user){
     var_dump('nome utente: '. $user->name . '<br>');
     var_dump('cognome: '. $user->lastname . '<br>');
     var_dump('email: '. $user->email . '<br>');
-    var_dump('sconto: '. $user->discount . '<br>');
+    var_dump('sconto: '. $user->getDiscount() . '<br>');
     var_dump('password: '. $user->password . '<br>');
     var_dump('<br>');
 }
